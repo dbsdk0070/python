@@ -4,7 +4,7 @@
 from bs4 import BeautifulSoup
 
 #페이지를 로딩(HTML문서를 읽어와라 encoding = utf-8형식으로 읽어오셈)
-page = open("c\\work2\\test01.html", "rt",encoding="utf-8").read()
+page = open("c:\\work2\\test01.html", "rt",encoding="utf-8").read()
 #검색이 용이한 객체 생성
 soup = BeautifulSoup(page,"html.parser")
 #print(soup.prettify())
@@ -23,9 +23,10 @@ soup = BeautifulSoup(page,"html.parser")
 for tag in soup.find_all("p"):
     #앞뒤에 공백문자 제거
     print(tag.text.strip())
-    
-
-
 
 
     
+
+
+
+
