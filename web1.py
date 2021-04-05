@@ -30,3 +30,10 @@ for tag in soup.find_all("p"):
 
 
 
+
+
+
+
+
+
+
