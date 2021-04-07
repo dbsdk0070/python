@@ -22,5 +22,25 @@ cur.executemany("insert into PhoneBook values (?, ?);", datalist)
 
 #검색
 cur.execute("select * from PhoneBook;") # select * : *는 모든 컬럼 몽땅 가져와라
-for row in cur:
-    print(row)
+# for row in cur:
+#     print(row)
+
+# for in roof해도 상관 없지만 fetchone으로도할 수 있다.
+#1건 검색
+print(cur.fetchone())
+#N건 검색
+print("---fetchMany(2)---")
+print(cur.fetchmany(2))
+print("---fetchall()---")
+cur.execute("select * from PhoneBook;")
+print(cur.fetchall())
+
+#결과를 슬라이싱
+cur.execute("select * from PhoneBook;")
+result = cur.fetchone()
+print(result[0])
+print(result[1])
+#2차원 행열 데이터 [행][열]
+result = cur.fetchall()
+print(result[0][0])
+print(result[0][1])
